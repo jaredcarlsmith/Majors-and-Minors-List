@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+    
+
+<style scoped>
+    hr {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border: .25px solid #d5d5d5;
+    }
+
+    /* Style for menu items */
+
+    .menu-item {
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 500;
+        cursor: pointer;
+        font-family: 'Avenir', 'Helvetica Neue', sans-serif;
+            padding: 10px 10px 10px 10px;
+    }
+
+    .menu-item:hover {
+        color: #9e163a;
+    }
+
+    .selected {
+        color: #9e163a;
+    }
+
+    /* Style for sub-menu rows */
+    .sub-menu-row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    /* Style for sub-menu columns */
+    .sub-menu-col {
+        flex-direction: flex;
+        width: 100%;
+        vertical-align: top;
+        font-family: 'Avenir', 'Helvetica Neue', sans-serif;
+    }
+
+    /* Style for sub-menu sections */
+    .sub-menu-section-1 {
+        padding: 30px 0 30px 0;
+        margin: 5px 0;
+        align-items: top;
+    }
+
+    .sub-menu-section-1:hover {
+        color: #9e163a;
+        font-weight: 500;
+    }
+
+    .sub-menu-section-2 {
+        padding: 30px 0 30px 0;
+        margin: 5px 0;
+        align-items: top;
+    }
+
+    .sub-menu-section-2:hover {
+        color: #9e163a;
+        font-weight: 500;
+    }
+
+    #major-minor-list {
+        margin: 48px;
+    }
+
+    @media (min-width: 768px) {
+        .sub-menu-row {
+            flex-direction: row;
+        }
+
+        .sub-menu-col {
+            flex: 1;
+            width: 50%;
+            margin: 20px;
+            font-size: 16px;
+        }
+
+        .sub-menu-section-1 {
+            padding: 40px 0 40px 0;
+            flex: 1;
+        }
+
+        .sub-menu-section-2 {
+            padding: 40px 0 40px 0;
+            flex: 1;
+        }
+
+        .menu-item {
+            margin-right: 20px;
+        }
+
+        .navigation {
+            margin-left: 25px
+        }
+
+        #major-minor-list {}
+    }
+
+    @media (min-width: 1100px) {
+        .menu-item {
+            font-size: 30px;
+        }
+
+        .sub-menu-col {
+            font-size: 20px;
+        }
+    }
+</style>
+<div id="major-minor-list">
+    <!-- Menu items -->
+    <div class="navigation">
+        <div class="menu-item" id="majors">Majors</div>
+        <div class="menu-item" id="minors">Minors</div>
+    </div>
+
+    <!-- Sub-menu rows -->
+    <div id="majors-sub-menu" class="sub-menu-row">
+        <div class="sub-menu-col">
+            <!-- Left column -->
+            <div href="" class="sub-menu-section-1">Art</div>
+            <hr>
+            <div href="" class="sub-menu-section-1">Biochemistry</div>
+            <hr>
+            <div href="" class="sub-menu-section-1">Biology</div>
+            <hr>
+            <div href="" class="sub-menu-section-1">Business Management &amp; Leadership</div>
+            <hr>
+            <div href="" class="sub-menu-section-1">Computer Science</div>
+            <hr>
+            <div href="" class="sub-menu-section-1">English</div>
+            <hr>
+            <div href="" class="sub-menu-section-1">Family &amp; Human Development</div>
+            <hr>
+            <div href="" class="sub-menu-section-1">History</div>
+            <hr>
+        </div>
+        <div class="sub-menu-col">
+            <!-- Right column -->
+            <div href="" class="sub-menu-section-2">Liberal Arts</div>
+            <hr>
+            <div href="" class="sub-menu-section-2">Mathematics</div>
+            <hr>
+            <div href="" class="sub-menu-section-2">Music</div>
+            <hr>
+            <div href="" class="sub-menu-section-2">Philosophy</div>
+            <hr>
+            <div href="" class="sub-menu-section-2">Politics</div>
+            <hr>
+            <div href="" class="sub-menu-section-2">Psychology</div>
+            <hr>
+            <div href="" class="sub-menu-section-2">Spanish</div>
+            <hr>
+            <div href="" class="sub-menu-section-2">Theatre</div>
+            <hr>
+        </div>
+    </div>
+
+    <div id="minors-sub-menu" class="sub-menu-row" style="display: none;">
+        <div class="sub-menu-col">
+            <!-- Left column -->
+            <div href="" class="sub-menu-section-1">Athletic Training</div>
+            <hr>
+            <div href="" class="sub-menu-section-1">Art</div>
+            <hr>
+            <div href="" class="sub-menu-section-1">Biology</div>
+            <hr>
+            <div href="" class="sub-menu-section-1">Business Management &amp; Leadership</div>
+            <hr>
+            <div href="" class="sub-menu-section-1">Chemistry</div>
+            <hr>
+            <div href="" class="sub-menu-section-1">Classical Studies</div>
+            <hr>
+            <div href="" class="sub-menu-section-1">Computer Science</div>
+            <hr>
+            <div href="" class="sub-menu-section-1">Creative Writing</div>
+            <hr>
+            <div href="" class="sub-menu-section-1">English</div>
+            <hr>
+        </div>
+        <div class="sub-menu-col">
+            <!-- Right column -->
+            <div href="" class="sub-menu-section-2">Family &amp; Human Development</div>
+            <hr>
+            <div href="" class="sub-menu-section-2">History</div>
+            <hr>
+            <div href="" class="sub-menu-section-2">Mathematics</div>
+            <hr>
+            <div href="" class="sub-menu-section-2">Music</div>
+            <hr>
+            <div href="" class="sub-menu-section-2">Philosophy</div>
+            <hr>
+            <div href="" class="sub-menu-section-2">Politics</div>
+            <hr>
+            <div href="" class="sub-menu-section-2">Spanish</div>
+            <hr>
+            <div href="" class="sub-menu-section-2">Theatre</div>
+            <hr>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    const majors = document.getElementById("majors");
+    const minors = document.getElementById("minors");
+    const majorsSubMenu = document.getElementById("majors-sub-menu");
+    const minorsSubMenu = document.getElementById("minors-sub-menu");
+    //Make majors act selected from the get go -- The other table is hidden using a style tag
+    majors.classList.add("selected");
+
+    majors.addEventListener("click", function () {
+        majorsSubMenu.style.display = "flex";
+        minorsSubMenu.style.display = "none";
+        minors.classList.remove("selected");
+        majors.classList.add("selected");
+    })
+
+    minors.addEventListener("click", function () {
+        majorsSubMenu.style.display = "none";
+        minorsSubMenu.style.display = "flex";
+        majors.classList.remove("selected");
+        minors.classList.add("selected");
+    })
+</script>
+
+
+
+</body>
