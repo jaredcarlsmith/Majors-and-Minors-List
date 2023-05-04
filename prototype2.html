@@ -5,10 +5,23 @@
     
 
 <style scoped>
-
-body {
-        margin: 20px 15% 20px 15%;
+    a {
+        color: black;
+        text-decoration: none;
+        font-weight: normal;
     }
+
+    a:hover {
+        text-decoration: none;
+        color: #9e163a;
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    a:visited {
+        text-decoration: none;
+    }
+
     hr {
         margin: 0;
         padding: 0;
@@ -29,6 +42,7 @@ body {
 
     .menu-item:hover {
         color: #9e163a;
+        cursor: pointer;
     }
 
     .selected {
@@ -59,20 +73,10 @@ body {
         align-items: top;
     }
 
-    .sub-menu-section-1:hover {
-        color: #9e163a;
-        font-weight: 500;
-    }
-
     .sub-menu-section-2 {
         padding: 30px 0 30px 0;
         margin: 5px 0;
         align-items: top;
-    }
-
-    .sub-menu-section-2:hover {
-        color: #9e163a;
-        font-weight: 500;
     }
 
     #major-minor-list {
@@ -93,20 +97,18 @@ body {
 
         .sub-menu-section-1 {
             padding: 25px 0 25px 0;
-            flex: 1;
         }
 
         .sub-menu-section-2 {
             padding: 25px 0 25px 0;
-            flex: 1;
         }
 
         .menu-item {
             margin-right: 20px;
         }
 
-        .navigation {
-            margin-left: 25px
+        .majorsNav {
+            margin-left: 15px
         }
 
         #major-minor-list {}
@@ -120,14 +122,15 @@ body {
         .sub-menu-col {
             font-size: 20px;
         }
+        .majorsNav {
+            margin-left: 15px
+        }
     }
 </style>
-
-<body>
     
 <div id="major-minor-list">
     <!-- Menu items -->
-    <div class="navigation">
+    <div class="majorsNav">
         <div class="menu-item" id="majors">Majors</div>
         <div class="menu-item" id="minors">Minors</div>
     </div>
@@ -136,40 +139,40 @@ body {
     <div id="majors-sub-menu" class="sub-menu-row">
         <div class="sub-menu-col">
             <!-- Left column -->
-            <div href="" class="sub-menu-section-1">Art</div>
+            <a href="/academics/programs/art"><div class="sub-menu-section-1">Art</div></a>
             <hr>
-            <div href="" class="sub-menu-section-1">Biochemistry</div>
+            <a href="/academics/programs/biochemistry"><div class="sub-menu-section-1">Biochemistry</div></a>
             <hr>
-            <div href="" class="sub-menu-section-1">Biology</div>
+            <a href="/academics/programs/biology"><div class="sub-menu-section-1">Biology</div></a>
             <hr>
-            <div href="" class="sub-menu-section-1">Business Management &amp; Leadership</div>
+            <a href="/academics/programs/business"><div class="sub-menu-section-1">Business Management &amp; Leadership</div></a>
             <hr>
-            <div href="" class="sub-menu-section-1">Computer Science</div>
+            <a href="/academics/programs/computer-science"><div class="sub-menu-section-1">Computer Science</div></a>
             <hr>
-            <div href="" class="sub-menu-section-1">English</div>
+            <a href="/academics/programs/english"><div class="sub-menu-section-1">English</div></a>
             <hr>
-            <div href="" class="sub-menu-section-1">Family &amp; Human Development</div>
+            <a href="/academics/programs/family-and-human-development"><div class="sub-menu-section-1">Family &amp; Human Development</div></a>
             <hr>
-            <div href="" class="sub-menu-section-1">History</div>
+            <a href="/academics/programs/history"><div class="sub-menu-section-1">History</div></a>
             <hr>
         </div>
         <div class="sub-menu-col">
             <!-- Right column -->
-            <div href="" class="sub-menu-section-2">Liberal Arts</div>
+            <a href="/academics/programs/liberal-arts"><div class="sub-menu-section-1">Liberal Arts</div></a>
             <hr>
-            <div href="" class="sub-menu-section-2">Mathematics</div>
+            <a href="/academics/programs/mathematics"><div class="sub-menu-section-1">Mathematics</div></a>
             <hr>
-            <div href="" class="sub-menu-section-2">Music</div>
+            <a href="/academics/programs/music"><div class="sub-menu-section-1">Music</div></a>
             <hr>
-            <div href="" class="sub-menu-section-2">Philosophy</div>
+            <a href="/academics/programs/philosophy"><div class="sub-menu-section-1">Philosophy</div></a>
             <hr>
-            <div href="" class="sub-menu-section-2">Politics</div>
+            <a href="/academics/programs/political-science"><div class="sub-menu-section-1">Political Science</div></a>
             <hr>
-            <div href="" class="sub-menu-section-2">Psychology</div>
+            <a href="/academics/programs/psychology"><div class="sub-menu-section-1">Psychology</div></a>
             <hr>
-            <div href="" class="sub-menu-section-2">Spanish</div>
+            <a href="/academics/programs/spanish"><div class="sub-menu-section-1">Spanish</div></a>
             <hr>
-            <div href="" class="sub-menu-section-2">Theatre</div>
+            <a href="/academics/programs/theatre"><div class="sub-menu-section-1">Theatre</div></a>
             <hr>
         </div>
     </div>
@@ -177,42 +180,40 @@ body {
     <div id="minors-sub-menu" class="sub-menu-row" style="display: none;">
         <div class="sub-menu-col">
             <!-- Left column -->
-            <div href="" class="sub-menu-section-1">Athletic Training</div>
+            <a href="/academics/programs/athletic-training"><div class="sub-menu-section-1">Athletic Training</div></a>
             <hr>
-            <div href="" class="sub-menu-section-1">Art</div>
+            <a href="/academics/programs/art"><div class="sub-menu-section-1">Art</div></a>
             <hr>
-            <div href="" class="sub-menu-section-1">Biology</div>
+            <a href="/academics/programs/biology"><div class="sub-menu-section-1">Biology</div></a>
             <hr>
-            <div href="" class="sub-menu-section-1">Business Management &amp; Leadership</div>
+            <a href="/academics/programs/business"><div class="sub-menu-section-1">Business Management &amp; Leadership</div></a>
             <hr>
-            <div href="" class="sub-menu-section-1">Chemistry</div>
+            <a href="/academics/programs/chemistry"><div class="sub-menu-section-1">Chemistry</div></a>
             <hr>
-            <div href="" class="sub-menu-section-1">Classical Studies</div>
+            <a href="/academics/programs/computer-science"><div class="sub-menu-section-1">Computer Science</div></a>
             <hr>
-            <div href="" class="sub-menu-section-1">Computer Science</div>
+            <a href="/academics/programs/creative-writing"><div class="sub-menu-section-1">Creative Writing</div></a>
             <hr>
-            <div href="" class="sub-menu-section-1">Creative Writing</div>
-            <hr>
-            <div href="" class="sub-menu-section-1">English</div>
+            <a href="/academics/programs/english"><div class="sub-menu-section-1">English</div></a>
             <hr>
         </div>
         <div class="sub-menu-col">
             <!-- Right column -->
-            <div href="" class="sub-menu-section-2">Family &amp; Human Development</div>
+            <a href="/academics/programs/family-and-human-development"><div class="sub-menu-section-2">Family &amp; Human Development</div></a>
             <hr>
-            <div href="" class="sub-menu-section-2">History</div>
+            <a href="/academics/programs/history"><div class="sub-menu-section-2">History</div></a>
             <hr>
-            <div href="" class="sub-menu-section-2">Mathematics</div>
+            <a href="/academics/programs/mathematics"><div class="sub-menu-section-2">Mathematics</div></a>
             <hr>
-            <div href="" class="sub-menu-section-2">Music</div>
+            <a href="/academics/programs/music"><div class="sub-menu-section-2">Music</div></a>
             <hr>
-            <div href="" class="sub-menu-section-2">Philosophy</div>
+            <a href="/academics/programs/psychology"><div class="sub-menu-section-2">Psychology</div></a>
             <hr>
-            <div href="" class="sub-menu-section-2">Politics</div>
+            <a href="/academics/programs/political-science"><div class="sub-menu-section-2">Political Science</div></a>
             <hr>
-            <div href="" class="sub-menu-section-2">Spanish</div>
+            <a href="/academics/programs/spanish"><div class="sub-menu-section-2">Spanish</div></a>
             <hr>
-            <div href="" class="sub-menu-section-2">Theatre</div>
+            <a href="/academics/programs/theatre"><div class="sub-menu-section-2">Theatre</div></a>
             <hr>
         </div>
     </div>
@@ -240,7 +241,3 @@ body {
         minors.classList.add("selected");
     })
 </script>
-
-
-
-</body>
