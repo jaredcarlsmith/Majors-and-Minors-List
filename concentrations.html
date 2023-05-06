@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+    
+<style>.circle{width:120px;margin-top:25px;}</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style scoped>
+    a {
+        color: black;
+        text-decoration: none;
+        font-weight: normal;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #9e163a;
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    a:visited {
+        text-decoration: none;
+    }
+
+    hr {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border: .25px solid #d5d5d5;
+    }
+
+    /* Style for menu items */
+
+    .programs-menu-item {
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 500;
+        cursor: pointer;
+        font-family: 'Avenir', 'Helvetica Neue', sans-serif;
+        padding: 10px 10px 10px 10px;
+    }
+    .programs-menu-item:hover {
+        color: #9e163a;
+        cursor: pointer;
+    }
+
+    .menu-item {
+        display: block;
+        font-size: 24px;
+        font-weight: 500;
+        cursor: pointer;
+        font-family: 'Avenir', 'Helvetica Neue', sans-serif;
+        padding: 10px 10px 10px 10px;
+    }
+
+    .page-number {
+        display: inline-block;
+        font-weight: 500;
+        cursor: pointer;
+        font-family: 'Avenir', 'Helvetica Neue', sans-serif;
+        }
+
+    
+
+    .selected {
+        color: #9e163a;
+        text-decoration: underline;
+    }
+
+    /* Style for sub-menu rows */
+    .sub-menu-row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    /* Style for sub-menu columns */
+    .sub-menu-col {
+        flex-direction: flex;
+        width: 100%;
+        vertical-align: top;
+        font-family: 'Avenir', 'Helvetica Neue', sans-serif;
+    }
+
+    /* Style for sub-menu sections */
+    .sub-menu-section-1 {
+        padding: 10px 0 10px 0;
+        margin: 5px 0;
+        align-items: top;
+    }
+
+    .sub-menu-section-2 {
+        padding: 10px 0 10px 0;
+        margin: 5px 0;
+        align-items: top;
+    }
+
+    .page-menu {
+        margin-left: 20px;
+    }
+
+    .main-container {
+        margin: 32px;
+    }
+
+    @media (min-width: 768px) {
+        .sub-menu-row {
+            flex-direction: row;
+        }
+
+        .sub-menu-col {
+            flex: 1;
+            width: 50%;
+            margin: 0 20px 20px 20px;
+            font-size: 16px;
+        }
+
+        .sub-menu-section-1 {
+            padding: 18px 0 18px 0;
+        }
+
+        .sub-menu-section-2 {
+            padding: 18px 0 18px 0;
+        }
+
+        .programs-menu-item {
+            margin-right: 20px;
+        }
+
+        .concentrationNav {
+            margin-left: 15px
+        }
+
+        .majorsNav {
+            margin-left: 15px
+        }
+
+        .page-menu {
+        margin-left: 40px;
+		margin-top: -30px;
+        }
+		
+		.pagination {
+		margin: 10px 0;
+		}
+
+        .main-container {
+            margin: 48px;
+        }
+
+        #full {
+            width: 100%;
+        }
+}
+
+    @media (min-width: 1100px) {
+        .menu-item {
+            font-size: 30px;
+        }
+
+        .programs-menu-item {
+            font-size: 30px;
+        }
+
+        .sub-menu-col {
+            font-size: 20px;
+        }
+        .concentrationNav {
+            margin-left: 15px
+        }
+        .majorsNav {
+            margin-left: 15px
+        }
+    }
+</style>
+
+<div class="row">
+    
+    <div class="col-sm-4 col-xs-12">
+        <h3>Academic Core</h3>
+        <p>A liberal arts education is a transformative, multidisciplinary experience that draws from the best sources. Our <a href="http://catalog.svu.edu/core-requirements/">Academic Core</a> teaches every student essential skills: to think analytically, communicate effectively, and write persuasively.</p>
+    </div>
+    
+    <div class="col-sm-4 col-xs-12">
+        <h3>Small Classes</h3>
+        <p>With an average class size of 15 students, our unique and engaging educational model encourages active learning directly from accomplished professors. As a result, 98 percent of seniors rated their relationships with professors above average.</p>
+    </div>
+    
+    <div class="col-sm-4 col-xs-12">
+        <h3>Excellent Results</h3>
+        <p>Our seniors rank in the top seven percent nationally for freshman-to-senior improvement. That's why we boast a 93-percent job and graduate school placement rate — the highest reported placement rate in the Commonwealth of Virginia.</p>
+    </div>
+    
+</div>
+
+<a name="programs"></a>
+
+<br />
+
+<h2>Programs &amp; Degrees</h2>
+
+<hr />
+
+<h3>Majors &amp; Minors</h3>
+
+<p>Majors and minors give students an opportunity to develop confidence and competency in a specific field. Every student must complete at least one major to graduate.</p>
+
+
+<div class="main-container">
+    <!-- Menu items -->
+    <div class="majorsNav">
+        <div class="programs-menu-item" id="majors">Majors</div>
+        <div class="programs-menu-item" id="minors">Minors</div>
+    </div>
+
+    <!-- Sub-menu rows -->
+    <div id="majors-sub-menu" class="sub-menu-row">
+        <div class="sub-menu-col">
+            <!-- Left column -->
+            <a href="/academics/programs/art"><div class="sub-menu-section-1">Art</div></a>
+            <hr>
+            <a href="/academics/programs/biochemistry"><div class="sub-menu-section-1">Biochemistry</div></a>
+            <hr>
+            <a href="/academics/programs/biology"><div class="sub-menu-section-1">Biology</div></a>
+            <hr>
+            <a href="/academics/programs/business"><div class="sub-menu-section-1">Business Management &amp; Leadership</div></a>
+            <hr>
+            <a href="/academics/programs/computer-science"><div class="sub-menu-section-1">Computer Science</div></a>
+            <hr>
+            <a href="/academics/programs/english"><div class="sub-menu-section-1">English</div></a>
+            <hr>
+            <a href="/academics/programs/family-and-human-development"><div class="sub-menu-section-1">Family &amp; Human Development</div></a>
+            <hr>
+            <a href="/academics/programs/history"><div class="sub-menu-section-1">History</div></a>
+            <hr>
+        </div>
+        <div class="sub-menu-col">
+            <!-- Right column -->
+            <a href="/academics/programs/liberal-arts"><div class="sub-menu-section-1">Liberal Arts</div></a>
+            <hr>
+            <a href="/academics/programs/mathematics"><div class="sub-menu-section-1">Mathematics</div></a>
+            <hr>
+            <a href="/academics/programs/music"><div class="sub-menu-section-1">Music</div></a>
+            <hr>
+            <a href="/academics/programs/philosophy"><div class="sub-menu-section-1">Philosophy</div></a>
+            <hr>
+            <a href="/academics/programs/political-science"><div class="sub-menu-section-1">Political Science</div></a>
+            <hr>
+            <a href="/academics/programs/psychology"><div class="sub-menu-section-1">Psychology</div></a>
+            <hr>
+            <a href="/academics/programs/spanish"><div class="sub-menu-section-1">Spanish</div></a>
+            <hr>
+            <a href="/academics/programs/theatre"><div class="sub-menu-section-1">Theatre</div></a>
+            <hr>
+        </div>
+    </div>
+
+    <div id="minors-sub-menu" class="sub-menu-row" style="display: none;">
+        <div class="sub-menu-col">
+            <!-- Left column -->
+            <a href="/academics/programs/athletic-training"><div class="sub-menu-section-1">Athletic Training</div></a>
+            <hr>
+            <a href="/academics/programs/art"><div class="sub-menu-section-1">Art</div></a>
+            <hr>
+            <a href="/academics/programs/biology"><div class="sub-menu-section-1">Biology</div></a>
+            <hr>
+            <a href="/academics/programs/business"><div class="sub-menu-section-1">Business Management &amp; Leadership</div></a>
+            <hr>
+            <a href="/academics/programs/chemistry"><div class="sub-menu-section-1">Chemistry</div></a>
+            <hr>
+            <a href="/academics/programs/computer-science"><div class="sub-menu-section-1">Computer Science</div></a>
+            <hr>
+            <a href="/academics/programs/creative-writing"><div class="sub-menu-section-1">Creative Writing</div></a>
+            <hr>
+            <a href="/academics/programs/english"><div class="sub-menu-section-1">English</div></a>
+            <hr>
+        </div>
+        <div class="sub-menu-col">
+            <!-- Right column -->
+            <a href="/academics/programs/family-and-human-development"><div class="sub-menu-section-2">Family &amp; Human Development</div></a>
+            <hr>
+            <a href="/academics/programs/history"><div class="sub-menu-section-2">History</div></a>
+            <hr>
+            <a href="/academics/programs/mathematics"><div class="sub-menu-section-2">Mathematics</div></a>
+            <hr>
+            <a href="/academics/programs/music"><div class="sub-menu-section-2">Music</div></a>
+            <hr>
+            <a href="/academics/programs/psychology"><div class="sub-menu-section-2">Psychology</div></a>
+            <hr>
+            <a href="/academics/programs/political-science"><div class="sub-menu-section-2">Political Science</div></a>
+            <hr>
+            <a href="/academics/programs/spanish"><div class="sub-menu-section-2">Spanish</div></a>
+            <hr>
+            <a href="/academics/programs/theatre"><div class="sub-menu-section-2">Theatre</div></a>
+            <hr>
+        </div>
+    </div>
+</div>
+
+
+
+<a name="concentrations"></a>
+
+<hr />
+
+<h3>Career Concentrations</h3>
+
+<p>Concentrations are central to Southern Virginia’s efforts to launch our students into careers or graduate school. These programs are designed to connect the training students get in their majors and core courses to specific skills and experiences that they will use after college.</p>
+
+<p>Concentrations contain a small number of required and suggested courses, as well as a required internship or practical experience. Moreover, advisors for each concentration work closely with individual students to guide and personalize the experience according to their specific interests, needs, and goals.</p>
+
+<p>Students interested in concentrations should talk with their academic advisor or to the advisor of their desired concentration.</p>
+
+<p>Concentrations marked with an asterisk (*) are designed to prepare students to seek a graduate degree.</p>
+
+<div class="main-container">
+    <!-- Menu items -->
+    <div id="concentrations">
+        <div class="menu-item">Concentrations</div>
+    </div>
+
+    <!-- Sub-menu rows -->
+    <div id="pg1-sub-menu" class="sub-menu-row">
+        <div class="sub-menu-col">
+            <!-- Left column -->
+            <a href="http://catalog.svu.edu/concentrations/chamber-music"><div class="sub-menu-section-1">Chamber Music</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/choral-studies"><div class="sub-menu-section-1">Choral Studies</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/coaching"><div class="sub-menu-section-1">Coaching</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/commercial-music/"><div class="sub-menu-section-1">Commercial Music</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/dentistry"><div class="sub-menu-section-1">Dentistry&#42;</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/digital-illustration"><div class="sub-menu-section-1">Digital Illustration</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/digital-photography"><div class="sub-menu-section-1">Digital Photography</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/instrumental-conducting"><div class="sub-menu-section-1">Instrumental Conducting</div></a>
+            <hr>
+        </div>
+        <div class="sub-menu-col">
+            <!-- Right column -->
+            <a href="http://catalog.svu.edu/concentrations/instrumental-studies"><div class="sub-menu-section-1">Instrumental Studies</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/international-affairs"><div class="sub-menu-section-1">International Affairs</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/museum-studies"><div class="sub-menu-section-1">Museum Studies</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/music-business"><div class="sub-menu-section-1">Music Business</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/music-education"><div class="sub-menu-section-1">Music Education</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/music-history-literature"><div class="sub-menu-section-1">Music History and Literature</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/music-therapy"><div class="sub-menu-section-1">Music Therapy</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/optometry"><div class="sub-menu-section-1">Optometry&#42;</div></a>
+            <hr>
+        </div>
+    </div>
+
+    <div id="pg2-sub-menu" class="sub-menu-row" style="display: none;">
+        <div class="sub-menu-col">
+            <!-- Left column -->
+            <a href="http://catalog.svu.edu/concentrations/pharmacy"><div class="sub-menu-section-1">Pharmacy&#42;</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/physical-therapy"><div class="sub-menu-section-1">Physical Therapy&#42;</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/physician-assistant"><div class="sub-menu-section-1">Physician Assistant&#42;</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/piano-studies"><div class="sub-menu-section-1">Piano Studies</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/pre-law"><div class="sub-menu-section-1">Pre Law&#42;</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/pre-macc"><div class="sub-menu-section-1">Pre-M.Acc. (Accounting)&#42;</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/pre-mfin"><div class="sub-menu-section-1">Pre-M.Fin. (Finance)&#42;</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/pre-medical"><div class="sub-menu-section-1">Pre-Medical&#42;</div></a>
+            <hr>
+        </div>
+        <div class="sub-menu-col">
+            <!-- Right column -->
+            <a href="http://catalog.svu.edu/concentrations/printmaking"><div class="sub-menu-section-2">Printmaking</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/public-policy"><div class="sub-menu-section-2">Public Policy</div></a>
+            <hr>
+            <a href="https://catalog.svu.edu/concentrations/publishing/"><div class="sub-menu-section-2">Publishing</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/religious-studies"><div class="sub-menu-section-2">Religious Studies</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/sports-management"><div class="sub-menu-section-2">Sports Management</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/veterinary-medicine"><div class="sub-menu-section-2">Veterinary Medicine&#42;</div></a>
+            <hr>
+            <a href="http://catalog.svu.edu/concentrations/vocal-studies"><div class="sub-menu-section-2">Vocal Studies</div></a>
+            <hr>
+        </div>
+
+    </div>
+    <div class="page-menu">
+        <ul class="pagination">
+            <li class="page-number page-item">
+                <a class="page-link" id="previous-page" href="#major-minor-list" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+				  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+            <li class="page-number page-item" id="page-one"><a href="#major-minor-list" class="page-link">1</a></li>
+            <li class="page-number page-item" id="page-two"><a href="#major-minor-list" class="page-link">2</a></li>
+            <li class="page-number page-item">
+                <a class="page-link" id="next-page" href="#major-minor-list" aria-label="Next">
+					<span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+                </a>
+              </li>
+        </ul>
+    </div>
+</div>
+
+<hr />
+
+<h3>Other Programs</h3>
+
+<div class="main-container">
+    <div id="other-programs">
+        <div class="menu-item">Other</div>
+        
+    </div>
+    <div id="majors-sub-menu" class="sub-menu-row">
+        <div class="sub-menu-col" id="full">
+            <a href="/academics/programs/pre-health"><div class="sub-menu-section-1">Pre-Health Professional&#42;</div></a>
+            <hr>
+            <a href="/academics/programs/rotc"><div class="sub-menu-section-1">ROTC&#42;</div></a>
+            <hr>
+            <a href="/academics/programs/afrotc"><div class="sub-menu-section-1">AFROTC&#42;</div></a>
+            <hr>
+            <a href="/academics/programs/teacher-licensure"><div class="sub-menu-section-1">Teacher Licensure</div></a>
+            <hr>
+        </div>
+    </div>
+</div>
+
+<script>
+const $pageOne = $("#page-one");
+const $pageTwo = $("#page-two");
+const $previousPage = $("#previous-page");
+const $nextPage = $("#next-page");
+const $p1SubMenu = $("#pg1-sub-menu");
+const $p2SubMenu = $("#pg2-sub-menu");
+
+$pageOne.addClass("selected");
+
+$previousPage.add($pageOne).on("click", () => {
+    $p1SubMenu.show();
+    $p2SubMenu.hide();
+    [$pageTwo, $nextPage, $previousPage].forEach(e => e.removeClass("selected"));
+    $pageOne.addClass("selected");
+});
+
+$pageTwo.add($nextPage).on("click", () => {
+    $p1SubMenu.hide();
+    $p2SubMenu.show();
+    [$pageOne, $nextPage, $previousPage].forEach(e => e.removeClass("selected"));
+    $pageTwo.addClass("selected");
+});
+
+const $majors = $("#majors");
+const $minors = $("#minors");
+const $majorsSubMenu = $("#majors-sub-menu");
+const $minorsSubMenu = $("#minors-sub-menu");
+
+$majors.addClass("selected");
+
+$majors.on("click", () => {
+    $majorsSubMenu.show();
+    $minorsSubMenu.hide();
+    $majors.addClass("selected");
+    $minors.removeClass("selected");
+});
+
+$minors.on("click", () => {
+    $majorsSubMenu.hide();
+    $minorsSubMenu.show();
+    $minors.addClass("selected");
+    $majors.removeClass("selected");
+});
+
+</script>
+
